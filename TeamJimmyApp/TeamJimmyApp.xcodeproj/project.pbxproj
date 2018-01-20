@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A02E344A2013F12100878E48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E34492013F12100878E48 /* MainViewController.swift */; };
+		A02E344C2013F19A00878E48 /* SphinxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E344B2013F19A00878E48 /* SphinxManager.swift */; };
 		A07F022C2013D433008D97F0 /* TLSphinx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07F022B2013D433008D97F0 /* TLSphinx.framework */; };
 		A07F022D2013D433008D97F0 /* TLSphinx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A07F022B2013D433008D97F0 /* TLSphinx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA8914492012EC830054C06B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8914482012EC830054C06B /* AppDelegate.swift */; };
-		CA89144B2012EC830054C06B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89144A2012EC830054C06B /* ViewController.swift */; };
+		CA89144B2012EC830054C06B /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA89144A2012EC830054C06B /* DebugViewController.swift */; };
 		CA89144E2012EC830054C06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA89144C2012EC830054C06B /* Main.storyboard */; };
 		CA8914532012EC830054C06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA8914522012EC830054C06B /* Assets.xcassets */; };
 		CA8914562012EC830054C06B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8914542012EC830054C06B /* LaunchScreen.storyboard */; };
@@ -50,10 +52,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A02E34492013F12100878E48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A02E344B2013F19A00878E48 /* SphinxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphinxManager.swift; sourceTree = "<group>"; };
 		A07F022B2013D433008D97F0 /* TLSphinx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TLSphinx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8914452012EC830054C06B /* TeamJimmyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamJimmyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8914482012EC830054C06B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA89144A2012EC830054C06B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA89144A2012EC830054C06B /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		CA89144D2012EC830054C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA8914522012EC830054C06B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA8914552012EC830054C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -119,7 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				CA8914482012EC830054C06B /* AppDelegate.swift */,
-				CA89144A2012EC830054C06B /* ViewController.swift */,
+				CA89144A2012EC830054C06B /* DebugViewController.swift */,
+				A02E34492013F12100878E48 /* MainViewController.swift */,
+				A02E344B2013F19A00878E48 /* SphinxManager.swift */,
 				CA89144C2012EC830054C06B /* Main.storyboard */,
 				CA8914522012EC830054C06B /* Assets.xcassets */,
 				CA8914542012EC830054C06B /* LaunchScreen.storyboard */,
@@ -289,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA89144B2012EC830054C06B /* ViewController.swift in Sources */,
+				A02E344A2013F12100878E48 /* MainViewController.swift in Sources */,
+				CA89144B2012EC830054C06B /* DebugViewController.swift in Sources */,
 				CA8914492012EC830054C06B /* AppDelegate.swift in Sources */,
+				A02E344C2013F19A00878E48 /* SphinxManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
