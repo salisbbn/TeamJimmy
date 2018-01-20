@@ -67,3 +67,4 @@ fastlane/test_output
 
 # React Native
 node_modules/
+/.DS_Store
