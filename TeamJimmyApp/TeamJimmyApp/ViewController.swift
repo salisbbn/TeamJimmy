@@ -11,11 +11,16 @@ import TLSphinx
 import Sphinx
 
 class ViewController: UIViewController {
+    @IBOutlet private weak var textView: UITextView!
 
     var decoder: TLSphinx.Decoder!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDecoder()
+    }
+
+    private func setupDecoder() {
         let sphinxBundle = Bundle(for: TLSphinx.Decoder.self)
         let modelPath = sphinxBundle.path(forResource: "en-us", ofType: nil)!
         let hmm = modelPath.appending("/en-us")
@@ -26,14 +31,23 @@ class ViewController: UIViewController {
             fatalError("Can't run test without a valid config")
         }
 
-        config.showDebugInfo = true
+        config.showDebugInfo = false
 
         self.decoder = Decoder(config: config)
     }
 
+    private func appendToTextView(text: String) {
+        let currentText: String = textView.text.appending("\n")
+        textView.text = currentText.appending(text)
+    }
+
     @IBAction private dynamic func startRecording() {
-        try! decoder.startDecodingSpeech {
-            print("Utterance: \(($0?.text ?? "none"))")
+        decoder.startDecodingSpeech { [weak self] hypothesis in
+            guard let hypothesis = hypothesis else { return }
+
+            let text = "Utterance: \(hypothesis.text) -- score: \(hypothesis.score)"
+            self?.appendToTextView(text: text)
+            print(text)
         }
     }
 
