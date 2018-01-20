@@ -5,6 +5,6 @@
       location = "group:TeamJimmyApp/TeamJimmyApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:TLSphinx/TLSphinx.xcodeproj">
+      location = "group:Submodules/TLSphinx/TLSphinx.xcodeproj">
    </FileRef>
 </Workspace>

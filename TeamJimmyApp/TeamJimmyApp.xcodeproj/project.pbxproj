@@ -460,10 +460,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UZDZ5UHYDL;
 				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../TLSphinx/Sphinx/include/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Submodules/TLSphinx/Sphinx/include/**";
 				INFOPLIST_FILE = TeamJimmyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../TLSphinx/Sphinx/lib/**";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../Submodules/TLSphinx/Sphinx/lib/**";
 				PRODUCT_BUNDLE_IDENTIFIER = design.finelineis.TeamJimmyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -479,10 +479,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UZDZ5UHYDL;
 				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../TLSphinx/Sphinx/include/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Submodules/TLSphinx/Sphinx/include/**";
 				INFOPLIST_FILE = TeamJimmyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../TLSphinx/Sphinx/lib/**";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../Submodules/TLSphinx/Sphinx/lib/**";
 				PRODUCT_BUNDLE_IDENTIFIER = design.finelineis.TeamJimmyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
