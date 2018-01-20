@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TeamJimmyApp/TeamJimmyApp.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TLSphinx-master/TLSphinx.xcodeproj">
    </FileRef>
 </Workspace>
