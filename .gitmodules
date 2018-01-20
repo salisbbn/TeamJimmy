@@ -1,0 +1,3 @@
+[submodule "TLSphnix"]
+	path = TLSphnix
+	url = git@github.com:salisbbn/TLSphinx.git
