@@ -6,6 +6,7 @@
 //  Copyright © 2018 Brian Salisbury. All rights reserved.
 //
 
+import AVFoundation
 import Foundation
 import TLSphinx
 import UIKit
@@ -14,6 +15,7 @@ import UIKit
 class MainViewController: UIViewController {
     @IBOutlet private weak var lastSpokenLabel: UILabel!
     private var lastHypothesisTimestamp: TimeInterval = 0
+    private let speechSynth = AVSpeechSynthesizer()
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -27,7 +29,14 @@ class MainViewController: UIViewController {
         guard let hypothesis = note.object as? Hypothesis else { return }
 
         lastHypothesisTimestamp = Date.timeIntervalSinceReferenceDate
+        speakUtterance(text: hypothesis.text)
         animateDisplayOfText(text: hypothesis.text, score: hypothesis.score, timestampValidator: lastHypothesisTimestamp)
+    }
+
+    private func speakUtterance(text: String) {
+        let utterance = AVSpeechUtterance(string: text)
+        speechSynth.stopSpeaking(at: .immediate)
+        speechSynth.speak(utterance)
     }
 
     private func animateDisplayOfText(text: String, score: Int, timestampValidator: TimeInterval) {
@@ -47,6 +56,14 @@ class MainViewController: UIViewController {
             delay += 50
         }
     }
+}
 
+extension MainViewController: AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
+        SphinxManager.shared.ignoreDecoderInput = true
+    }
 
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        SphinxManager.shared.ignoreDecoderInput = false
+    }
 }

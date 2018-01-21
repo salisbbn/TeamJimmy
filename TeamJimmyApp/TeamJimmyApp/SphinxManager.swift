@@ -22,6 +22,11 @@ extension Notification.Name {
 class SphinxManager {
     static let shared = SphinxManager()
 
+    var ignoreDecoderInput = false {
+        didSet {
+            decoder.shouldIgnoreInput = ignoreDecoderInput
+        }
+    }
     private(set) var isDecoding: Bool = false
     private var decoder: TLSphinx.Decoder!
 
